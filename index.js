@@ -25,7 +25,7 @@ for (let i = 0; i < allCopyCountBtn.length; i++) {
     alert("copied");
   });
 }
-
+const totalData = [];
 const allCallBtn = document.getElementsByClassName("call-count-btn");
 
 for (let i = 0; i < allCallBtn.length; i++) {
@@ -41,9 +41,26 @@ for (let i = 0; i < allCallBtn.length; i++) {
     if (coinNumber > 20) {
       let newCoinNumber = coinNumber - 20;
       document.getElementById("coin-number").innerText = newCoinNumber;
+      const data = {
+        name: singleAlertMsg,
+        number: singleH3,
+        date: new Date().toLocaleTimeString(),
+      };
 
-      alert(`calling to :${singleAlertMsg}
+      alert(`calling to :${singleAlertMsg} 
 ${singleH3}`);
+      const div = document.createElement("div");
+      div.innerHTML = `<div
+            class="w-full bg-gray-200 p-3 rounded-lg mt-2 flex justify-between items-center"
+          >
+            <div>
+              <h4 class="text-lg font-bold">${data.name}</h4>
+              <p>${data.number}</p>
+            </div>
+            <p>${data.date}</p>
+          </div>`;
+      const container = document.getElementById("history-section");
+      container.prepend(div);
     } else {
       alert("Please You May Recharge");
     }
