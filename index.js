@@ -42,8 +42,8 @@ for (let i = 0; i < allCallBtn.length; i++) {
       let newCoinNumber = coinNumber - 20;
       document.getElementById("coin-number").innerText = newCoinNumber;
       const data = {
-        name: singleAlertMsg,
-        number: singleH3,
+        name: singleH3,
+        number: singleAlertMsg,
         date: new Date().toLocaleTimeString(),
       };
 
@@ -51,7 +51,7 @@ for (let i = 0; i < allCallBtn.length; i++) {
 ${singleH3}`);
       const div = document.createElement("div");
       div.innerHTML = `<div
-            class="w-full bg-gray-200 p-3 rounded-lg mt-2 flex justify-between items-center"
+            class="w-full bg-[#FAFAFA] p-3 rounded-lg mt-2 flex justify-between items-center"
           >
             <div>
               <h4 class="text-lg font-bold">${data.name}</h4>
