@@ -9,5 +9,6 @@ What is Event Bubbling and how does it work?
 
 What is Event Delegation in JavaScript? Why is it useful?
 => Instead of adding event listeners to every child, you add one listener to the parent and let bubbling do the work.
+
 What is the difference between preventDefault() and stopPropagation() methods?
 => for the preventDefault() we use it to stop refreashing the page and for stopPropagation() we use to stop bubboling mean if you clikc child the parent won't know that , that you have clicked the child
