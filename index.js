@@ -66,3 +66,7 @@ ${singleH3}`);
     }
   });
 }
+
+document.getElementById("clear-btn").addEventListener("click", function () {
+  document.getElementById("history-section").innerHTML = "";
+});
